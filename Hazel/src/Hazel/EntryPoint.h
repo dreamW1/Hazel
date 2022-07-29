@@ -5,6 +5,11 @@
 extern Hazel::Application* Hazel::CreateApplication();
 
 int main(int argc, char** argv) {
+
+	Hazel::Log::Init();
+	HZ_CORE_ERROR("Hellow");
+	HZ_CLIENT_INFO("HAZEL");
+
 	Hazel::Application* app = Hazel::CreateApplication();
 	app->run();
 	delete app;
